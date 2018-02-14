@@ -1,4 +1,17 @@
 .awcache
 .vscode
+src
+e2e
+.ng_pkg_build
 config
 node_modules
+.angular-cli.json
+karma.conf.json
+ng-package.json
+package-lock.json
+package.json
+protractor.conf.js
+public_api.js
+tsconfig.json
+tslint.json
+yarn.lock
