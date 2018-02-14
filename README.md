@@ -9,15 +9,39 @@ npm install --save ngx-kor-time-ago
 
 example
 
+app.module.ts
+`
+    import { BrowserModule } from '@angular/platform-browser';  
+    import { NgModule } from '@angular/core';  
+
+
+    import { AppComponent } from './app.component';  
+    import { TimeAgoKorModule } from './pipes/time-ago-kor.module';  
+
+
+    @NgModule({  
+        declarations: [  
+            AppComponent  
+        ],  
+        imports: [  
+            BrowserModule,  
+            TimeAgoKorModule  
+        ],  
+        providers: [],  
+        bootstrap: [AppComponent]  
+    })  
+    export class AppModule { }  
+`
+
 .ts
 `
-	export class AppComponent {
-      datetime = '2018-01-08 11:12:14';
-    }
+	export class AppComponent {  
+      datetime = '2018-01-08 11:12:14';  
+    }  
 `
 
 .html
 `
-	<div>{{datetime | timeAgoKor}}</div>
+	<div>{{datetime | timeAgoKor}}</div>  
 `
 
