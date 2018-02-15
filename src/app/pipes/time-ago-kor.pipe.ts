@@ -13,7 +13,7 @@ export class TimeAgoKorPipe implements PipeTransform {
   postTime: any;
 
   /**
-   * mysql
+   * mysql이면 9시간을 더해줘야함
    * @param time 
    */
   timeSubstring(time){
@@ -21,7 +21,7 @@ export class TimeAgoKorPipe implements PipeTransform {
     let sYear = times.substring(0,4);
     let sMonth = times.substring(5,7)-1;
     let sDate = times.substring(8,10);
-    let sHour = Number(times.substring(11,13))+9; // UTC+09:00 = 우리시간
+    let sHour = Number(times.substring(11,13))
     let sMin = times.substring(14,16);
     let sSecond = times.substring(17,19);
 
